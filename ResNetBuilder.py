@@ -35,7 +35,7 @@ def resnet_layer(inputs, num_filters=16, kernel_size=3, strides=1, activation='r
     return x
 
 
-def resnet_v1(input_shape, depth, num_classes=10, initializer='heconstant', layersconfig=None):
+def resnet_v1(input_shape, depth, num_classes=200, initializer='heconstant', layersconfig=None):
 
     if (depth - 2) % 6 != 0:
         raise ValueError('depth should be 6n+2 (eg 20, 32, 44 in [a])')
@@ -81,7 +81,7 @@ def resnet_v1(input_shape, depth, num_classes=10, initializer='heconstant', laye
     return model
 
 
-def resnet_v2(input_shape, depth, num_classes=10, initializer='heconstant', layersconfig=None):
+def resnet_v2(input_shape, depth, num_classes=200, initializer='heconstant', layersconfig=None):
     
     if (depth - 2) % 9 != 0:
         raise ValueError('depth should be 9n+2 (eg 56 or 110 in [b])')
